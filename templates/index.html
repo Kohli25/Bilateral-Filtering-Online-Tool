@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilateral Cross-Filtering</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bilateral Cross-Filtering Tool</h1>
+        <form id="imageForm" action="/" method="POST" enctype="multipart/form-data">
+            <div class="upload-section">
+                <label for="image1">Upload First Image:</label>
+                <input type="file" id="image1" name="image1" accept="image/*" required>
+            </div>
+            <div class="upload-section">
+                <label for="image2">Upload Second Image:</label>
+                <input type="file" id="image2" name="image2" accept="image/*" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="progress-section">
+            <h2>Processing Updates:</h2>
+            <div id="progress"></div>
+        </div>
+
+        <div id="output-section">
+            <h2>Output Image:</h2>
+            <img id="outputImage" alt="Processed Image will appear here">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
