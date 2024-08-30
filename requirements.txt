@@ -4,3 +4,5 @@ numpy==1.24.3
 opencv-contrib-python==4.8.1.78
 Pillow==9.5.0
 matplotlib==3.7.1
+gunicorn==20.1.0
+eventlet==0.33.0
